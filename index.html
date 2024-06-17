@@ -23,11 +23,20 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://i.ibb.co/LZ1tWyJ/Image.png" />
     <style>
+      @font-face {
+        font-family: "GmarketSansMedium";
+        src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+          format("woff");
+        font-weight: medium;
+        font-style: medium;
+      }
+
       body {
         width: 100vw;
         height: 100vh;
         margin: 0;
         overflow: hidden;
+        font-family: "GmarketSansMedium", sans-serif;
       }
 
       body iframe:first-child {
@@ -92,45 +101,9 @@
         padding: 2em;
       }
 
-      @font-face {
-        font-family: AppleSDGothicNeoB;
-        src: url(./fonts/AppleSDGothicNeoB.eot);
-        src: local(AppleSDGothicNeoB),
-          url(./fonts/AppleSDGothicNeoB.eot?#iefix) format("embedded-opentype"),
-          url(./fonts/AppleSDGothicNeoB.woff2) format("woff2"),
-          url(./fonts/AppleSDGothicNeoB.woff) format("woff"),
-          url(./fonts/AppleSDGothicNeoB.ttf) format("truetype");
-        font-style: normal;
-        font-weight: bold;
-        unicode-range: U+0-10FFFF;
-      }
-
-      @font-face {
-        font-family: AppleSDGothicNeoH;
-        src: url(./fonts/AppleSDGothicNeoH.eot);
-        src: local(AppleSDGothicNeoH),
-          url(./fonts/AppleSDGothicNeoH.eot?#iefix) format("embedded-opentype"),
-          url(./fonts/AppleSDGothicNeoH.woff2) format("woff2"),
-          url(./fonts/AppleSDGothicNeoH.woff) format("woff"),
-          url(./fonts/AppleSDGothicNeoH.ttf) format("truetype");
-        font-style: normal;
-        font-weight: normal;
-        unicode-range: U+0-10FFFF;
-      }
-
+      /* 한글 명언 폰트 사이즈 */
       #quote_1 {
-        font-size: 18px;
-        color: white;
-        font-weight: bold;
-        word-break: keep-all;
-      }
-      @media screen and (max-width: 250px) {
-        #quote_1 {
-          font-size: 1em;
-        }
-      }
-      #quote_en {
-        font-size: 18px;
+        font-size: 14px;
         color: white;
         font-weight: bold;
         word-break: keep-all;
@@ -141,6 +114,20 @@
         }
       }
 
+      /* 영어 명언 폰트 사이즈 */
+      #quote_en {
+        font-size: 14px;
+        color: white;
+        font-weight: bold;
+        word-break: keep-all;
+      }
+      @media screen and (max-width: 250px) {
+        #quote_1 {
+          font-size: 1em;
+        }
+      }
+
+      /* 아래 작은 글씨 폰트 사이즈 */
       #quote_2 {
         font-style: italic;
         font-size: 10px;
@@ -157,6 +144,7 @@
 
   <body>
     <div id="bg">
+      <!-- 첫 시작 이미지 변경은 여기서 하세요! -->
       <img
         id="image"
         src="https://i.ibb.co/n668rcp/Kakao-Talk-20240616-213639398.jpg"
@@ -167,6 +155,7 @@
         <p id="quote_1">한국어 명언 위젯입니다.</p>
         <p id="quote_2">5분마다 새로운 명언으로 바뀝니다.</p>
         <p id="refreshButton" onclick="resetQuote()">
+          <!-- 새로고침 버튼의 위치입니다. -->
           <img
             id="refreshImage"
             src="https://i.ibb.co/kMScC7G/image.png"
@@ -176,6 +165,7 @@
       </div>
     </div>
     <script>
+      //   배경 이미지 변경은 여기서 하시면 됩니다!
       var images = [
         "https://i.ibb.co/RHkQmC1/Kakao-Talk-20240616-213639398-03.jpg",
         "https://i.ibb.co/85TN3Cp/Kakao-Talk-20240616-213639398-04.jpg",
@@ -205,7 +195,7 @@
       function browseRandomImage() {
         document.getElementById("image").src = images[randomInt(IMG_COUNT)];
       }
-
+      //   아래와 같이 동일한 형식으로 입력하시면 추가됩니다 :D
       var quotes = [
         {
           quote: "우리는 딱 우리가 생각하는 만큼의 삶을 산다.",
