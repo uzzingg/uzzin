@@ -21,22 +21,20 @@
       content="Notion에서 사용할 수 있는 한국어 명언 위젯입니다."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://i.ibb.co/LZ1tWyJ/Image.png" />
+    <meta property="og:image" content="https://i.ibb.co/BNcvfvm/2024-06-17-10-55-26.png" />
     <style>
-      @font-face {
-        font-family: "GmarketSansMedium";
-        src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
-          format("woff");
-        font-weight: medium;
-        font-style: medium;
-      }
-
+ @font-face {
+    font-family: 'MangoDdobak-B';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/MangoDdobak-B.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
       body {
         width: 100vw;
         height: 100vh;
         margin: 0;
         overflow: hidden;
-        font-family: "GmarketSansMedium", sans-serif;
+        font-family: "MangoDdobak-B"
       }
 
       body iframe:first-child {
@@ -142,23 +140,23 @@
     </style>
   </head>
 
+
   <body>
     <div id="bg">
       <!-- 첫 시작 이미지 변경은 여기서 하세요! -->
       <img
         id="image"
-        src="https://i.ibb.co/n668rcp/Kakao-Talk-20240616-213639398.jpg"
+        src="https://i.ibb.co/BNcvfvm/2024-06-17-10-55-26.png"
         alt="배경이미지입니다."
       />
       <div id="quote">
         <p id="quote_en"></p>
-        <p id="quote_1">한국어 명언 위젯입니다.</p>
-        <p id="quote_2">5분마다 새로운 명언으로 바뀝니다.</p>
+        <p id="quote_1">BE WITH ME</p>
         <p id="refreshButton" onclick="resetQuote()">
           <!-- 새로고침 버튼의 위치입니다. -->
           <img
             id="refreshImage"
-            src="https://i.ibb.co/kMScC7G/image.png"
+            src="https://i.ibb.co/t2DsSgc/5-B3709-A8-F5-B0-4538-9-CCB-68463629181-B.png"
             alt="새로고침"
           />
         </p>
@@ -167,13 +165,13 @@
     <script>
       //   배경 이미지 변경은 여기서 하시면 됩니다!
       var images = [
-        "https://i.ibb.co/RHkQmC1/Kakao-Talk-20240616-213639398-03.jpg",
-        "https://i.ibb.co/85TN3Cp/Kakao-Talk-20240616-213639398-04.jpg",
-        "https://i.ibb.co/GQtpZLd/Kakao-Talk-20240616-213639398-05.jpg",
-        "https://i.ibb.co/ChXB7BF/Kakao-Talk-20240616-213639398-06.jpg",
-        "https://i.ibb.co/n668rcp/Kakao-Talk-20240616-213639398.jpg",
-        "https://i.ibb.co/pwgWzPF/Kakao-Talk-20240616-213639398-01.jpg",
-        "https://i.ibb.co/3MWYxqr/Kakao-Talk-20240616-213639398-02.jpg",
+        "https://i.ibb.co/FWQx6r3/2024-06-17-10-50-54.png",
+        "https://i.ibb.co/JppSH90/new-jeans-danielle-bubble-gum.jpg",
+        "https://i.ibb.co/QFNfgHw/2024-06-17-10-50-43.png",
+        "https://i.ibb.co/TrRZm72/2024-06-17-10-48-54.png",
+        "https://i.ibb.co/gm5Csmj/2024-06-17-10-49-18.png",
+        "https://i.ibb.co/BNcvfvm/2024-06-17-10-55-26.png",
+        "https://i.ibb.co/y0NxqpX/2024-06-17-10-57-18.png",
       ];
       ///배경 이미지 preload
       function preload(images) {
